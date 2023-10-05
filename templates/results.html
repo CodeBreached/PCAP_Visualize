@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PCAP Analyzer Results</title>
+</head>
+<body>
+    <h1>PCAP Analysis Results</h1>
+    <h2>Source IPs</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>IP</th>
+                <th>Count</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for ip, count in source_ips.items() %}
+                <tr>
+                    <td>{{ ip }}</td>
+                    <td>{{ count }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h2>Destination IPs</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>IP</th>
+                <th>Count</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for ip, count in destination_ips.items() %}
+                <tr>
+                    <td>{{ ip }}</td>
+                    <td>{{ count }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h2>Ports</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Port</th>
+                <th>Count</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for port, count in ports.items() %}
+                <tr>
+                    <td>{{ port }}</td>
+                    <td>{{ count }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h2>Protocols</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Protocol</th>
+                <th>Count</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for protocol, count in protocols.items() %}
+                <tr>
+                    <td>{{ protocol }}</td>
+                    <td>{{ count }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
